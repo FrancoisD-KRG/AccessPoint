@@ -1,0 +1,3 @@
+#! /bin/sh
+
+java -cp /Users/francoisdziedzinl/IdeaProjects/Test3/out/production/Test3/jetty-server-9.2.5.v20141112.jar:/Users/francoisdziedzinl/IdeaProjects/Test3/out/production/Test3/jetty-util-9.2.5.v20141112.jar:/Users/francoisdziedzinl/IdeaProjects/Test3/out/production/Test3/jetty-servlet-9.2.5.v20141112.jar:/Users/francoisdziedzinl/IdeaProjects/Test3/out/production/Test3/servlet-api-3.1.jar:/Users/francoisdziedzinl/IdeaProjects/Test3/out/production/Test3/jetty-http-9.2.5.v20141112.jar:/Users/francoisdziedzinl/IdeaProjects/Test3/out/production/Test3/jetty-io-9.2.5.v20141112.jar:/Users/francoisdziedzinl/IdeaProjects/Test3/out/production/Test3/ HelloWorld
