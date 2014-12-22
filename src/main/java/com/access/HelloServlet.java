@@ -39,6 +39,8 @@ public class HelloServlet extends HttpServlet {
 			socket = new Socket("localhost", 9090);
 			output = new PrintStream(socket.getOutputStream());
 			output.print(command);
+			output.close();
+			socket.close();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
