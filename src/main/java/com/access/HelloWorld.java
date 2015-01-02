@@ -19,7 +19,7 @@ public class HelloWorld
 
 		ResourceHandler resourcehandler = new ResourceHandler();
 		resourcehandler.setDirectoriesListed(true);
-		resourcehandler.setResourceBase("out/production/AccessPoint/");
+		resourcehandler.setResourceBase("/usr/share/java/accessPoint/");
 		resourcehandler.setWelcomeFiles(new String[]{"main/resources/webapp/index.html"});
 
 		HandlerList handlers = new HandlerList();

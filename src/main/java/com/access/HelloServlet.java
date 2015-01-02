@@ -11,12 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String q = req.getParameter("q");
 		PrintWriter out = resp.getWriter();
 
 		out.println("<html>");
 		out.println("<body>");
-		out.println("The paramter q was \"" + q + "\".");
+		out.println("This is not the page you're looking for.");
 		out.println("</body>");
 		out.println("</html>");
 	}
@@ -32,18 +31,18 @@ public class HelloServlet extends HttpServlet {
 		out.println("</body>");
 		out.println("</html>");
 
-		Socket socket;
-		PrintStream output;
-
 		try {
-			socket = new Socket("localhost", 9090);
-			output = new PrintStream(socket.getOutputStream());
-			output.print(command);
-			output.close();
+			Socket socket = new Socket("localhost", 9090);
+			OutputStreamWriter outStream = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
+			outStream.write(command);
+			outStream.close();
 			socket.close();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 
+		if (command.equals("kill")) {
+			System.exit(0);
+		}
 	}
 }
